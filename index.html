@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blood Donation Camp</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Blood Donation Camp</h1>
+        <p>Donate Blood, Save Lives</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#camps">Camps</a>
+        <a href="#eligibility">Eligibility</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <h2>Be a Hero, Donate Blood!</h2>
+
+        <p>
+            Your one donation can help save someone's life.
+            Join our blood donation campaign and make a difference.
+        </p>
+
+        <a href="#register" class="btn">Register Now</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+
+        <p>
+            Blood Donation Camp Coordinator is a platform designed
+            to provide information about blood donation camps.
+
+            Our aim is to encourage people to donate blood and
+            spread awareness about the importance of blood donation.
+
+            We help interested donors learn about upcoming camps,
+            understand eligibility criteria and register for
+            donation camps.
+        </p>
+    </section>
+
+    <!-- Why Donate Section -->
+    <section id="why">
+        <h2>Why Donate Blood?</h2>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Save Lives</h3>
+                <p>Blood donation can help patients who need blood.</p>
+            </div>
+
+            <div class="box">
+                <h3>Help Others</h3>
+                <p>Your contribution can support people in need.</p>
+            </div>
+
+            <div class="box">
+                <h3>Spread Awareness</h3>
+                <p>Encourage others to participate in blood donation.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Camps Section -->
+    <section id="camps">
+        <h2>Upcoming Blood Donation Camps</h2>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Camp 1</h3>
+                <p>Date: 20 November 2026</p>
+                <p>Location: University Campus</p>
+            </div>
+
+            <div class="box">
+                <h3>Camp 2</h3>
+                <p>Date: 25 November 2026</p>
+                <p>Location: Community Hall</p>
+            </div>
+
+            <div class="box">
+                <h3>Camp 3</h3>
+                <p>Date: 30 November 2026</p>
+                <p>Location: City Hospital</p>
+            </div>
+
+        </div>
+
+        <p class="note">
+            Note: These are sample camp details for the project.
+        </p>
+    </section>
+
+    <!-- Eligibility Section -->
+    <section id="eligibility">
+        <h2>Blood Donation Eligibility</h2>
+
+        <p>Before donating blood, check these general requirements:</p>
+
+        <ul>
+            <li>Donor must be between 18 and 65 years old.</li>
+            <li>First-time donors should not be above 60 years.</li>
+            <li>Weight should meet the required medical criteria.</li>
+            <li>Hemoglobin level should be at least 12.5 g/dL.</li>
+            <li>Donor should be physically fit and healthy.</li>
+        </ul>
+
+        <p>
+            Final eligibility is decided by qualified medical staff
+            after health screening.
+        </p>
+
+        <p>
+            For more information:
+            <a href="https://www.eraktkosh.mohfw.gov.in/eraktkoshPortal/"
+                target="_blank">
+                Visit Government Blood Donation Portal
+            </a>
+        </p>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register">
+        <h2>Donor Registration Form</h2>
+
+        <p>Fill in your details to register for a blood donation camp.</p>
+
+        <form>
+
+            <label>Full Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label>Age:</label>
+            <input type="number" id="age" placeholder="Enter your age">
+
+            <label>Blood Group:</label>
+
+            <select id="blood">
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <label>Donor Type:</label>
+
+            <select id="type">
+                <option value="">Select Donor Type</option>
+                <option value="First Time">First Time Donor</option>
+                <option value="Regular">Regular Donor</option>
+            </select>
+
+            <label>Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter phone number">
+
+            <button type="button" onclick="registerDonor()">
+                Submit Registration
+            </button>
+
+        </form>
+
+        <p id="result"></p>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <p>Project Name: Blood Donation Camp Coordinator</p>
+        <p>Department: Computer Science and Engineering</p>
+        <p>University: Lovely Professional University</p>
+
+        <p>Email: blooddonation@example.com</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Blood Donation Camp Coordinator</p>
+        <p>Donate Blood, Save Lives!</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
