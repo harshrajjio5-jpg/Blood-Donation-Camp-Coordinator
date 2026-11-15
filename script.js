@@ -1,155 +1,233 @@
-// Camp Information
-let camps = {
+/* Basic Settings */
 
-    university: {
-        date: "20 November 2026",
-        time: "10 AM - 2 PM",
-        location: "University Campus",
-        slots: ["10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM"]
-    },
-
-    community: {
-        date: "25 November 2026",
-        time: "9 AM - 1 PM",
-        location: "Community Hall",
-        slots: ["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM"]
-    },
-
-    hospital: {
-        date: "30 November 2026",
-        time: "11 AM - 3 PM",
-        location: "City Hospital",
-        slots: ["11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM"]
-    }
-
-};
-
-
-// Display Selected Camp Details
-function showCampDetails() {
-
-    let selectedCamp = document.getElementById("camp").value;
-
-    let details = document.getElementById("campDetails");
-
-    let timeSlot = document.getElementById("appointmentTime");
-
-    timeSlot.innerHTML = '<option value="">Select Time Slot</option>';
-
-    if (selectedCamp == "") {
-
-        details.innerHTML = "";
-
-        return;
-
-    }
-
-    let camp = camps[selectedCamp];
-
-    details.innerHTML =
-        "<p><b>Date:</b> " + camp.date + "</p>" +
-        "<p><b>Camp Time:</b> " + camp.time + "</p>" +
-        "<p><b>Location:</b> " + camp.location + "</p>";
-
-    // Add Time Slots
-    for (let i = 0; i < camp.slots.length; i++) {
-
-        let option = document.createElement("option");
-
-        option.value = camp.slots[i];
-
-        option.text = camp.slots[i];
-
-        timeSlot.appendChild(option);
-
-    }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-// Donor Registration Function
-function registerDonor() {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
 
-    let name = document.getElementById("name").value.trim();
+/* Header */
 
-    let age = Number(document.getElementById("age").value);
+header {
+    background-color: #c62828;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-    let bloodGroup = document.getElementById("bloodGroup").value;
+nav {
+    margin-top: 15px;
+}
 
-    let donorType = document.getElementById("donorType").value;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
 
-    let phone = document.getElementById("phone").value.trim();
+nav a:hover {
+    color: #ffcccc;
+}
 
-    let campName = document.getElementById("camp").value;
+/* Home Section */
 
-    let appointmentTime = document.getElementById("appointmentTime").value;
+.hero {
+    background-color: #ffebee;
+    text-align: center;
+    padding: 80px 20px;
+}
 
-    let result = document.getElementById("result");
+.hero h2 {
+    font-size: 35px;
+    color: #c62828;
+    margin-bottom: 15px;
+}
 
+.hero p {
+    margin-bottom: 25px;
+}
 
-    // Check Empty Fields
-    if (
-        name == "" ||
-        age == 0 ||
-        bloodGroup == "" ||
-        donorType == "" ||
-        phone == "" ||
-        campName == "" ||
-        appointmentTime == ""
-    ) {
+/* Buttons */
 
-        alert("Please fill all the fields.");
+.btn {
+    display: inline-block;
+    background-color: #c62828;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
-        return;
+.btn:hover {
+    background-color: #8e0000;
+}
 
+/* Sections */
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #c62828;
+    margin-bottom: 25px;
+}
+
+/* Cards */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.card h3 {
+    color: #c62828;
+    margin-bottom: 10px;
+}
+
+/* Eligibility Section */
+
+.eligibility-box {
+    background-color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.eligibility-box p {
+    margin: 10px 0;
+}
+
+/* Registration Form */
+
+form {
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #c62828;
+}
+
+/* Form Button */
+
+form button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    background-color: #c62828;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #8e0000;
+}
+
+/* Camp Details */
+
+#campDetails {
+    color: #c62828;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Registration Result */
+
+#result {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Resources Section */
+
+#resources {
+    background-color: #ffebee;
+}
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 600px) {
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
     }
 
-
-    // Age Validation
-    if (age < 18 || age > 65) {
-
-        alert("Please check the official eligibility guidelines and consult medical staff.");
-
-        return;
-
+    .hero h2 {
+        font-size: 27px;
     }
 
-
-    // Phone Number Validation
-    if (!/^[0-9]{10}$/.test(phone)) {
-
-        alert("Please enter a valid 10 digit phone number.");
-
-        return;
-
+    .card {
+        width: 100%;
     }
 
-
-    // Get Camp Information
-    let camp = camps[campName];
-
-
-    // Display Registration Details
-    result.innerHTML =
-
-        "<h3>Registration Successful!</h3>" +
-
-        "<p><b>Name:</b> " + name + "</p>" +
-
-        "<p><b>Age:</b> " + age + "</p>" +
-
-        "<p><b>Blood Group:</b> " + bloodGroup + "</p>" +
-
-        "<p><b>Donor Type:</b> " + donorType + "</p>" +
-
-        "<p><b>Phone:</b> " + phone + "</p>" +
-
-        "<p><b>Camp Date:</b> " + camp.date + "</p>" +
-
-        "<p><b>Camp Location:</b> " + camp.location + "</p>" +
-
-        "<p><b>Appointment Time:</b> " + appointmentTime + "</p>" +
-
-        "<p>Please contact the camp organizers for actual appointment confirmation.</p>";
+    form {
+        padding: 20px;
+    }
 
 }
