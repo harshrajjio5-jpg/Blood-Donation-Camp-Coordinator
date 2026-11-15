@@ -1,4 +1,5 @@
-/* Basic Styling */
+/* Basic Settings */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,70 +18,76 @@ body {
 }
 
 /* Header */
+
 header {
-    background-color: #b30000;
+    background-color: #c62828;
     color: white;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
-header h1 {
-    margin-bottom: 15px;
+nav {
+    margin-top: 15px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 8px;
+    margin: 10px;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #ffcccc;
 }
 
 /* Home Section */
+
 .hero {
-    background-color: #ffe6e6;
+    background-color: #ffebee;
     text-align: center;
     padding: 80px 20px;
 }
 
 .hero h2 {
     font-size: 35px;
-    color: #b30000;
+    color: #c62828;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    margin: 15px 0;
-    font-size: 18px;
+    margin-bottom: 25px;
 }
+
+/* Buttons */
 
 .btn {
     display: inline-block;
-    background-color: #b30000;
+    background-color: #c62828;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: #800000;
+    background-color: #8e0000;
 }
 
-/* Common Sections */
+/* Sections */
+
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 section h2 {
-    color: #b30000;
+    color: #c62828;
     margin-bottom: 25px;
 }
 
 /* Cards */
+
 .cards {
     display: flex;
     justify-content: center;
@@ -90,45 +97,42 @@ section h2 {
 
 .card {
     background-color: white;
-    width: 280px;
     padding: 25px;
+    width: 280px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px #ccc;
 }
 
 .card h3 {
-    color: #b30000;
+    color: #c62828;
     margin-bottom: 10px;
 }
 
-/* Eligibility */
+/* Eligibility Section */
+
 .eligibility-box {
     background-color: white;
-    max-width: 650px;
+    max-width: 600px;
     margin: auto;
     padding: 25px;
-    text-align: left;
     border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 2px 8px #ccc;
 }
 
-.eligibility-box li {
+.eligibility-box p {
     margin: 10px 0;
 }
 
-.small-note {
-    margin-top: 15px;
-    font-size: 13px;
-    color: #666;
-}
-
 /* Registration Form */
+
 form {
     background-color: white;
     max-width: 500px;
     margin: auto;
-    padding: 25px;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px #ccc;
     text-align: left;
 }
 
@@ -145,92 +149,69 @@ select {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 15px;
 }
 
 input:focus,
 select:focus {
     outline: none;
-    border-color: #b30000;
+    border-color: #c62828;
 }
 
-/* Camp Details */
-#campDetails {
-    background-color: #ffe6e6;
-    margin-top: 15px;
-    padding: 12px;
-    border-radius: 5px;
-}
+/* Form Button */
 
-/* Submit Button */
-button {
+form button {
     width: 100%;
-    background-color: #b30000;
+    padding: 14px;
+    margin-top: 25px;
+    background-color: #c62828;
     color: white;
     border: none;
-    padding: 13px;
-    margin-top: 20px;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #800000;
+form button:hover {
+    background-color: #8e0000;
+}
+
+/* Camp Details */
+
+#campDetails {
+    color: #c62828;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 /* Registration Result */
+
 #result {
     max-width: 500px;
     margin: 20px auto;
     padding: 15px;
-    background-color: #e6ffe6;
+    font-weight: bold;
     border-radius: 5px;
 }
 
-/* Government Resources */
-.resource-intro {
-    margin-bottom: 25px;
-}
+/* Resources Section */
 
-.resource-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.resource-btn {
-    display: inline-block;
-    background-color: #b30000;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-.resource-btn:hover {
-    background-color: #800000;
+#resources {
+    background-color: #ffebee;
 }
 
 /* Footer */
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-}
-
-.footer-note {
-    font-size: 12px;
-    margin-top: 8px;
+    padding: 25px;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
 
-    header h1 {
-        font-size: 22px;
-    }
+@media screen and (max-width: 600px) {
 
     nav a {
         display: inline-block;
@@ -246,6 +227,7 @@ footer {
     }
 
     form {
-        width: 100%;
+        padding: 20px;
     }
+
 }
