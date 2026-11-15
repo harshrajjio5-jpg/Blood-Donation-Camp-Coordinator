@@ -1,233 +1,186 @@
-/* Basic Settings */
+// Display Camp Details
+function showCampDetails() {
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    let camp = document.getElementById("camp").value;
 
-html {
-    scroll-behavior: smooth;
-}
+    let details = document.getElementById("campDetails");
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-}
+    if (camp == "University Campus") {
 
-/* Header */
+        details.innerHTML =
+            "Date: 20 November 2026 | Location: LPU Campus | Time: 9 AM - 2 PM";
 
-header {
-    background-color: #c62828;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav {
-    margin-top: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ffcccc;
-}
-
-/* Home Section */
-
-.hero {
-    background-color: #ffebee;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero h2 {
-    font-size: 35px;
-    color: #c62828;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    margin-bottom: 25px;
-}
-
-/* Buttons */
-
-.btn {
-    display: inline-block;
-    background-color: #c62828;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #8e0000;
-}
-
-/* Sections */
-
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-section h2 {
-    color: #c62828;
-    margin-bottom: 25px;
-}
-
-/* Cards */
-
-.cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background-color: white;
-    padding: 25px;
-    width: 280px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #ccc;
-}
-
-.card h3 {
-    color: #c62828;
-    margin-bottom: 10px;
-}
-
-/* Eligibility Section */
-
-.eligibility-box {
-    background-color: white;
-    max-width: 600px;
-    margin: auto;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: left;
-    box-shadow: 0 2px 8px #ccc;
-}
-
-.eligibility-box p {
-    margin: 10px 0;
-}
-
-/* Registration Form */
-
-form {
-    background-color: white;
-    max-width: 500px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #ccc;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-input,
-select {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 15px;
-}
-
-input:focus,
-select:focus {
-    outline: none;
-    border-color: #c62828;
-}
-
-/* Form Button */
-
-form button {
-    width: 100%;
-    padding: 14px;
-    margin-top: 25px;
-    background-color: #c62828;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #8e0000;
-}
-
-/* Camp Details */
-
-#campDetails {
-    color: #c62828;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-/* Registration Result */
-
-#result {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 15px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-/* Resources Section */
-
-#resources {
-    background-color: #ffebee;
-}
-
-/* Footer */
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 25px;
-}
-
-/* Responsive Design */
-
-@media screen and (max-width: 600px) {
-
-    nav a {
-        display: inline-block;
-        margin: 5px;
     }
 
-    .hero h2 {
-        font-size: 27px;
+    else if (camp == "Community Hall") {
+
+        details.innerHTML =
+            "Date: 25 November 2026 | Location: Community Hall | Time: 10 AM - 3 PM";
+
     }
 
-    .card {
-        width: 100%;
+    else if (camp == "City Hospital") {
+
+        details.innerHTML =
+            "Date: 30 November 2026 | Location: City Hospital | Time: 9 AM - 1 PM";
+
     }
 
-    form {
-        padding: 20px;
+    else {
+
+        details.innerHTML = "";
+
     }
+
+}
+
+
+// Donor Registration Function
+
+function registerDonor() {
+
+    let name = document.getElementById("name").value;
+
+    let age = Number(document.getElementById("age").value);
+
+    let blood = document.getElementById("bloodGroup").value;
+
+    let type = document.getElementById("donorType").value;
+
+    let phone = document.getElementById("phone").value;
+
+    let weight = Number(document.getElementById("weight").value);
+
+    let hemoglobin = Number(document.getElementById("hemoglobin").value);
+
+    let camp = document.getElementById("camp").value;
+
+    let slot = document.getElementById("slot").value;
+
+    let result = document.getElementById("result");
+
+
+    // Check Empty Fields
+
+    if (
+        name.trim() == "" ||
+        age <= 0 ||
+        blood == "" ||
+        type == "" ||
+        phone == "" ||
+        weight <= 0 ||
+        hemoglobin <= 0 ||
+        camp == "" ||
+        slot == ""
+    ) {
+
+        result.innerHTML = "Please fill all the fields.";
+
+        result.style.backgroundColor = "#ffcccc";
+
+        result.style.color = "red";
+
+        return;
+
+    }
+
+
+    // Phone Number Validation
+
+    if (!/^\d{10}$/.test(phone)) {
+
+        result.innerHTML = "Please enter a valid 10-digit phone number.";
+
+        result.style.backgroundColor = "#ffcccc";
+
+        result.style.color = "red";
+
+        return;
+
+    }
+
+
+    // Age Validation
+
+    if (age < 18 || age > 65) {
+
+        result.innerHTML = "Age must be between 18 and 65 years.";
+
+        result.style.backgroundColor = "#ffcccc";
+
+        result.style.color = "red";
+
+        return;
+
+    }
+
+
+    // Weight Validation
+
+    if (weight < 45) {
+
+        result.innerHTML =
+            "Minimum weight requirement is 45 kg. Please consult medical staff.";
+
+        result.style.backgroundColor = "#ffcccc";
+
+        result.style.color = "red";
+
+        return;
+
+    }
+
+
+    // Haemoglobin Validation
+
+    if (hemoglobin < 12.5) {
+
+        result.innerHTML =
+            "Minimum haemoglobin requirement is 12.5 g/dL. Please consult medical staff.";
+
+        result.style.backgroundColor = "#ffcccc";
+
+        result.style.color = "red";
+
+        return;
+
+    }
+
+
+    // Successful Registration
+
+    result.innerHTML =
+
+        "<h3>Registration Successful!</h3>" +
+
+        "<p>Welcome, " + name + "</p>" +
+
+        "<p>Age: " + age + "</p>" +
+
+        "<p>Blood Group: " + blood + "</p>" +
+
+        "<p>Donor Type: " + type + "</p>" +
+
+        "<p>Weight: " + weight + " kg</p>" +
+
+        "<p>Haemoglobin: " + hemoglobin + " g/dL</p>" +
+
+        "<p>Selected Camp: " + camp + "</p>" +
+
+        "<p>Appointment: " + slot + "</p>" +
+
+        "<p>Please complete medical screening at the camp.</p>";
+
+
+    result.style.backgroundColor = "#d4edda";
+
+    result.style.color = "green";
+
+
+    // Clear Form
+
+    document.getElementById("donorForm").reset();
+
+    document.getElementById("campDetails").innerHTML = "";
 
 }
