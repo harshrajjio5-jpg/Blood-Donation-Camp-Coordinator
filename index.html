@@ -12,8 +12,10 @@
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Header Section -->
+
     <header>
+
         <h1>Blood Donation Camp Coordinator</h1>
 
         <nav>
@@ -24,10 +26,12 @@
             <a href="#register">Register</a>
             <a href="#contact">Contact</a>
         </nav>
+
     </header>
 
 
     <!-- Home Section -->
+
     <section id="home" class="hero">
 
         <h2>Donate Blood, Save Lives</h2>
@@ -43,22 +47,27 @@
 
 
     <!-- About Section -->
+
     <section id="about">
 
         <h2>About Our Project</h2>
 
         <p>
-            Blood Donation Camp Coordinator is a simple web application
+            Blood Donation Camp Coordinator is a web application
             designed to manage blood donation camps.
 
             It allows donors to view upcoming camps, check basic
             eligibility requirements and register for appointments.
+
+            The application also provides camp details,
+            appointment time slots and donor registration facilities.
         </p>
 
     </section>
 
 
-    <!-- Why Donate Section -->
+    <!-- Why Donate Blood Section -->
+
     <section id="why">
 
         <h2>Why Donate Blood?</h2>
@@ -66,18 +75,38 @@
         <div class="cards">
 
             <div class="card">
+
                 <h3>Save Lives</h3>
-                <p>Blood donation helps patients in emergencies.</p>
+
+                <p>
+                    Blood donation helps patients during
+                    emergencies and medical treatments.
+                </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Help Others</h3>
-                <p>Your donation can support people in need.</p>
+
+                <p>
+                    Your donation can support people
+                    who need blood.
+                </p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Be a Hero</h3>
-                <p>Every donor plays an important role.</p>
+
+                <p>
+                    Every blood donor plays an
+                    important role in society.
+                </p>
+
             </div>
 
         </div>
@@ -85,7 +114,8 @@
     </section>
 
 
-    <!-- Camps Section -->
+    <!-- Upcoming Camps Section -->
+
     <section id="camps">
 
         <h2>Upcoming Blood Donation Camps</h2>
@@ -93,24 +123,41 @@
         <div class="cards">
 
             <div class="card">
+
                 <h3>University Campus</h3>
+
                 <p>Date: 20 November 2026</p>
+
                 <p>Location: LPU Campus</p>
+
                 <p>Time: 9 AM - 2 PM</p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Community Hall</h3>
+
                 <p>Date: 25 November 2026</p>
+
                 <p>Location: Community Hall</p>
+
                 <p>Time: 10 AM - 3 PM</p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>City Hospital</h3>
+
                 <p>Date: 30 November 2026</p>
+
                 <p>Location: City Hospital</p>
+
                 <p>Time: 9 AM - 1 PM</p>
+
             </div>
 
         </div>
@@ -119,19 +166,30 @@
 
 
     <!-- Eligibility Section -->
+
     <section id="eligibility">
 
         <h2>Blood Donation Eligibility</h2>
 
         <div class="eligibility-box">
 
-            <p>✔ Age should be between 18 and 65 years.</p>
+            <p>
+                ✔ Age should generally be between 18 and 65 years.
+            </p>
 
-            <p>✔ Minimum body weight should be 45 kg.</p>
+            <p>
+                ✔ Minimum body weight requirement depends
+                on the donation volume and applicable guidelines.
+            </p>
 
-            <p>✔ Haemoglobin should be at least 12.5 g/dL.</p>
+            <p>
+                ✔ Haemoglobin should generally be at least
+                12.5 g/dL.
+            </p>
 
-            <p>✔ Donor should be in good general health.</p>
+            <p>
+                ✔ Donor should be in good general health.
+            </p>
 
             <p>
                 Final eligibility depends on medical screening
@@ -143,7 +201,8 @@
     </section>
 
 
-    <!-- Registration Section -->
+    <!-- Donor Registration Section -->
+
     <section id="register">
 
         <h2>Donor Registration</h2>
@@ -151,11 +210,19 @@
         <form id="donorForm">
 
             <label>Full Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <input type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required>
 
 
             <label>Age</label>
-            <input type="number" id="age" placeholder="Enter your age" required>
+
+            <input type="number"
+                id="age"
+                placeholder="Enter your age"
+                required>
 
 
             <label>Blood Group</label>
@@ -183,6 +250,7 @@
                 <option value="">Select Donor Type</option>
 
                 <option>First Time Donor</option>
+
                 <option>Regular Donor</option>
 
             </select>
@@ -190,45 +258,67 @@
 
             <label>Phone Number</label>
 
-            <input type="tel" id="phone"
-                placeholder="Enter 10 digit phone number" required>
+            <input type="tel"
+                id="phone"
+                placeholder="Enter 10 digit phone number"
+                required>
 
 
-            <!-- NEW WEIGHT FIELD -->
+            <!-- Weight Field -->
 
             <label>Weight (in kg)</label>
 
-            <input type="number" id="weight"
+            <input type="number"
+                id="weight"
                 placeholder="Enter your weight in kg"
-                min="1" step="0.1" required>
+                min="1"
+                step="0.1"
+                required>
 
 
-            <!-- NEW HAEMOGLOBIN FIELD -->
+            <!-- Haemoglobin Field -->
 
             <label>Haemoglobin (g/dL)</label>
 
-            <input type="number" id="hemoglobin"
+            <input type="number"
+                id="hemoglobin"
                 placeholder="Enter haemoglobin level"
-                min="1" step="0.1" required>
+                min="1"
+                step="0.1"
+                required>
 
+
+            <!-- Camp Selection -->
 
             <label>Select Donation Camp</label>
 
-            <select id="camp" onchange="showCampDetails()" required>
+            <select id="camp"
+                onchange="showCampDetails()"
+                required>
 
                 <option value="">Select Camp</option>
 
-                <option value="University Campus">University Campus</option>
+                <option value="University Campus">
+                    University Campus
+                </option>
 
-                <option value="Community Hall">Community Hall</option>
+                <option value="Community Hall">
+                    Community Hall
+                </option>
 
-                <option value="City Hospital">City Hospital</option>
+                <option value="City Hospital">
+                    City Hospital
+                </option>
 
             </select>
 
 
+            <!-- Camp Information -->
+
             <div id="campDetails"></div>
 
+
+            <!-- Appointment Slot -->
 
             <label>Appointment Time</label>
 
@@ -251,31 +341,40 @@
             </select>
 
 
+            <!-- Registration Button -->
+
             <button type="button" onclick="registerDonor()">
+
                 Register Now
+
             </button>
 
         </form>
 
+
+        <!-- Registration Result -->
 
         <div id="result"></div>
 
     </section>
 
 
-    <!-- Government Resources -->
+    <!-- Government Resources Section -->
 
     <section id="resources">
 
         <h2>Government Resources</h2>
 
         <p>
-            Visit the official e-RaktKosh portal for blood
-            donation information and nearby blood banks.
+            Visit the official e-RaktKosh portal
+            for blood donation information.
         </p>
 
+        <br>
+
         <a href="https://eraktkosh.mohfw.gov.in/"
-            target="_blank" class="btn">
+            target="_blank"
+            class="btn">
 
             Visit e-RaktKosh
 
@@ -299,7 +398,7 @@
     </section>
 
 
-    <!-- Footer -->
+    <!-- Footer Section -->
 
     <footer>
 
@@ -312,6 +411,8 @@
 
     </footer>
 
+
+    <!-- JavaScript File -->
 
     <script src="script.js"></script>
 
