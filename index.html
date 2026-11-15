@@ -12,9 +12,9 @@
 
 <body>
 
-    <!-- Header -->
+    <!-- Navigation -->
     <header>
-        <h1>Blood Donation Camp Coordinator</h1>
+        <h1>Blood Donation Camp</h1>
 
         <nav>
             <a href="#home">Home</a>
@@ -22,38 +22,44 @@
             <a href="#camps">Camps</a>
             <a href="#eligibility">Eligibility</a>
             <a href="#register">Register</a>
-            <a href="#resources">Resources</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
+
 
     <!-- Home Section -->
     <section id="home" class="hero">
 
         <h2>Donate Blood, Save Lives</h2>
 
-        <p>Your small contribution can make a big difference.</p>
+        <p>
+            Your one donation can make a big difference.
+            Join our blood donation camps and help save lives.
+        </p>
 
         <a href="#register" class="btn">Register Now</a>
 
     </section>
 
+
     <!-- About Section -->
     <section id="about">
 
-        <h2>About Blood Donation</h2>
+        <h2>About Our Project</h2>
 
         <p>
-            Blood donation is a simple act that can help save lives.
-            Our website provides information about upcoming blood
-            donation camps and allows donors to register for their
-            preferred camp and time slot.
+            Blood Donation Camp Coordinator is a simple web application
+            designed to manage blood donation camps.
+
+            It allows donors to view upcoming camps, check basic
+            eligibility requirements and register for appointments.
         </p>
 
     </section>
 
+
     <!-- Why Donate Section -->
-    <section class="why-donate">
+    <section id="why">
 
         <h2>Why Donate Blood?</h2>
 
@@ -61,24 +67,25 @@
 
             <div class="card">
                 <h3>Save Lives</h3>
-                <p>Your donation can help people in need.</p>
+                <p>Blood donation helps patients in emergencies.</p>
             </div>
 
             <div class="card">
                 <h3>Help Others</h3>
-                <p>Support patients who require blood.</p>
+                <p>Your donation can support people in need.</p>
             </div>
 
             <div class="card">
-                <h3>Spread Awareness</h3>
-                <p>Encourage others to donate blood.</p>
+                <h3>Be a Hero</h3>
+                <p>Every donor plays an important role.</p>
             </div>
 
         </div>
 
     </section>
 
-    <!-- Upcoming Camps -->
+
+    <!-- Camps Section -->
     <section id="camps">
 
         <h2>Upcoming Blood Donation Camps</h2>
@@ -86,69 +93,77 @@
         <div class="cards">
 
             <div class="card">
-                <h3>University Campus Camp</h3>
-                <p><b>Date:</b> 20 November 2026</p>
-                <p><b>Time:</b> 10 AM - 2 PM</p>
-                <p><b>Location:</b> University Campus</p>
+                <h3>University Campus</h3>
+                <p>Date: 20 November 2026</p>
+                <p>Location: LPU Campus</p>
+                <p>Time: 9 AM - 2 PM</p>
             </div>
 
             <div class="card">
-                <h3>Community Hall Camp</h3>
-                <p><b>Date:</b> 25 November 2026</p>
-                <p><b>Time:</b> 9 AM - 1 PM</p>
-                <p><b>Location:</b> Community Hall</p>
+                <h3>Community Hall</h3>
+                <p>Date: 25 November 2026</p>
+                <p>Location: Community Hall</p>
+                <p>Time: 10 AM - 3 PM</p>
             </div>
 
             <div class="card">
-                <h3>City Hospital Camp</h3>
-                <p><b>Date:</b> 30 November 2026</p>
-                <p><b>Time:</b> 11 AM - 3 PM</p>
-                <p><b>Location:</b> City Hospital</p>
+                <h3>City Hospital</h3>
+                <p>Date: 30 November 2026</p>
+                <p>Location: City Hospital</p>
+                <p>Time: 9 AM - 1 PM</p>
             </div>
 
         </div>
 
     </section>
 
+
     <!-- Eligibility Section -->
     <section id="eligibility">
 
-        <h2>Donor Eligibility Criteria</h2>
+        <h2>Blood Donation Eligibility</h2>
 
         <div class="eligibility-box">
 
-            <ul>
-                <li>Generally, donors should be between 18 and 65 years old.</li>
-                <li>Donors must meet the required weight and haemoglobin criteria.</li>
-                <li>Donors should be in suitable health on the donation day.</li>
-                <li>Final eligibility will be checked by qualified medical staff.</li>
-            </ul>
+            <p>✔ Age should be between 18 and 65 years.</p>
 
-            <p class="small-note">
-                Eligibility depends on medical screening and applicable guidelines.
+            <p>✔ Minimum body weight should be 45 kg.</p>
+
+            <p>✔ Haemoglobin should be at least 12.5 g/dL.</p>
+
+            <p>✔ Donor should be in good general health.</p>
+
+            <p>
+                Final eligibility depends on medical screening
+                by qualified medical staff.
             </p>
 
         </div>
 
     </section>
 
+
     <!-- Registration Section -->
     <section id="register">
 
         <h2>Donor Registration</h2>
 
-        <form onsubmit="registerDonor(); return false;">
+        <form id="donorForm">
 
-            <label>Full Name:</label>
-            <input type="text" id="name" placeholder="Enter your name">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
 
-            <label>Age:</label>
-            <input type="number" id="age" placeholder="Enter your age">
 
-            <label>Blood Group:</label>
+            <label>Age</label>
+            <input type="number" id="age" placeholder="Enter your age" required>
 
-            <select id="bloodGroup">
+
+            <label>Blood Group</label>
+
+            <select id="bloodGroup" required>
+
                 <option value="">Select Blood Group</option>
+
                 <option>A+</option>
                 <option>A-</option>
                 <option>B+</option>
@@ -157,133 +172,146 @@
                 <option>AB-</option>
                 <option>O+</option>
                 <option>O-</option>
+
             </select>
 
-            <label>Donor Type:</label>
 
-            <select id="donorType">
+            <label>Donor Type</label>
+
+            <select id="donorType" required>
+
                 <option value="">Select Donor Type</option>
+
                 <option>First Time Donor</option>
                 <option>Regular Donor</option>
-            </select>
-
-            <label>Phone Number:</label>
-            <input type="tel" id="phone" placeholder="Enter 10 digit phone number">
-
-            <label>Select Donation Camp:</label>
-
-            <select id="camp" onchange="showCampDetails()">
-
-                <option value="">Select a Camp</option>
-                <option value="university">University Campus Camp</option>
-                <option value="community">Community Hall Camp</option>
-                <option value="hospital">City Hospital Camp</option>
 
             </select>
+
+
+            <label>Phone Number</label>
+
+            <input type="tel" id="phone"
+                placeholder="Enter 10 digit phone number" required>
+
+
+            <!-- NEW WEIGHT FIELD -->
+
+            <label>Weight (in kg)</label>
+
+            <input type="number" id="weight"
+                placeholder="Enter your weight in kg"
+                min="1" step="0.1" required>
+
+
+            <!-- NEW HAEMOGLOBIN FIELD -->
+
+            <label>Haemoglobin (g/dL)</label>
+
+            <input type="number" id="hemoglobin"
+                placeholder="Enter haemoglobin level"
+                min="1" step="0.1" required>
+
+
+            <label>Select Donation Camp</label>
+
+            <select id="camp" onchange="showCampDetails()" required>
+
+                <option value="">Select Camp</option>
+
+                <option value="University Campus">University Campus</option>
+
+                <option value="Community Hall">Community Hall</option>
+
+                <option value="City Hospital">City Hospital</option>
+
+            </select>
+
 
             <div id="campDetails"></div>
 
-            <label>Select Appointment Time Slot:</label>
 
-            <select id="appointmentTime">
+            <label>Appointment Time</label>
+
+            <select id="slot" required>
+
                 <option value="">Select Time Slot</option>
+
+                <option>9:00 AM - 10:00 AM</option>
+
+                <option>10:00 AM - 11:00 AM</option>
+
+                <option>11:00 AM - 12:00 PM</option>
+
+                <option>12:00 PM - 1:00 PM</option>
+
+                <option>1:00 PM - 2:00 PM</option>
+
+                <option>2:00 PM - 3:00 PM</option>
+
             </select>
 
-            <button type="submit">Submit Registration</button>
+
+            <button type="button" onclick="registerDonor()">
+                Register Now
+            </button>
 
         </form>
+
 
         <div id="result"></div>
 
     </section>
 
-    <!-- NEW: Government Resources Section -->
+
+    <!-- Government Resources -->
+
     <section id="resources">
 
-        <h2>Explore Official Government Resources</h2>
+        <h2>Government Resources</h2>
 
-        <p class="resource-intro">
-            Want to learn more about blood donation?
-            Explore these official government resources
-            for reliable information.
+        <p>
+            Visit the official e-RaktKosh portal for blood
+            donation information and nearby blood banks.
         </p>
 
-        <div class="cards">
+        <a href="https://eraktkosh.mohfw.gov.in/"
+            target="_blank" class="btn">
 
-            <div class="card resource-card">
+            Visit e-RaktKosh
 
-                <h3>e-RaktKosh Portal</h3>
-
-                <p>
-                    Explore blood banks, blood availability
-                    and blood donation camp information across India.
-                </p>
-
-                <a href="https://eraktkosh.mohfw.gov.in/BLDAHIMS/bloodbank/transactions/bbpublicindex.html"
-                   target="_blank" rel="noopener noreferrer" class="resource-btn">
-                    Visit Official Portal
-                </a>
-
-            </div>
-
-            <div class="card resource-card">
-
-                <h3>About Blood Donation</h3>
-
-                <p>
-                    Learn about blood donation, its importance
-                    and the donation process.
-                </p>
-
-                <a href="https://eraktkosh.mohfw.gov.in/BLDAHIMS/bloodbank/donateblood.cnt"
-                   target="_blank" rel="noopener noreferrer" class="resource-btn">
-                    Learn More
-                </a>
-
-            </div>
-
-            <div class="card resource-card">
-
-                <h3>Frequently Asked Questions</h3>
-
-                <p>
-                    Find answers to common questions
-                    about blood donation.
-                </p>
-
-                <a href="https://eraktkosh.mohfw.gov.in/BLDAHIMS/bloodbank/eraktkoshfaq.cnt"
-                   target="_blank" rel="noopener noreferrer" class="resource-btn">
-                    Explore FAQs
-                </a>
-
-            </div>
-
-        </div>
+        </a>
 
     </section>
 
+
     <!-- Contact Section -->
+
     <section id="contact">
 
         <h2>Contact Us</h2>
 
-        <p>Email: bloodcamp@example.com</p>
-        <p>Phone: 9876543210</p>
+        <p>Blood Donation Camp Coordinator</p>
+
+        <p>Lovely Professional University</p>
+
+        <p>Email: blooddonation@example.com</p>
 
     </section>
 
+
     <!-- Footer -->
+
     <footer>
 
-        <p>© 2026 Blood Donation Camp Coordinator</p>
-
-        <p>Donate Blood, Save Lives!</p>
-
-        <p class="footer-note">
-            Educational project. Camp information is for demonstration purposes.
+        <p>
+            © 2026 Blood Donation Camp Coordinator.
+            All Rights Reserved.
         </p>
 
+        <p>Donate Blood, Save Lives ❤️</p>
+
     </footer>
+
 
     <script src="script.js"></script>
 
